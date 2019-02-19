@@ -1,0 +1,7 @@
+\frametitle{Vale, me he convencido... pero, ¿cómo comienzo?}
+Antes de empezar a escribir tu primer \begin{verbatim} \begin{document} \end{verbatim}
+debes entender que aunque \LaTeX \, es una herramienta muy potente y puedes escribir toda clase de documentos con el, algunas veces resulta una mejor opción utilizar una herramienta Office.\\[28pt]
+Bien, lo primero que necesitaremos serán las macros \TeX; para ello podemos instalar \href{https://miktex.org/download}{\textcolor{cyan}{\underline{MiKTeX}}} o \href{https://tug.org/texlive/}{\textcolor{cyan}{\underline{TeXLive}}}.\\[8pt]
+Luego, necesitaremos un editor de texto dedicado a \LaTeX \,, personalmente les recomiendo \href{http://www.xm1math.net/texmaker/download.html}{\textcolor{cyan}{\underline{TeXMaker}}} pero pueden usar cualquiera de su agrado (tal vez alguien sabe codear en Vim... :0).\\[8pt]
+Opcionalmente, pueden usar Overleaf, ShareLaTeX o Verbosus para escribir \LaTeX \, de forma online.
+%\textcolor{cyan}{\underline{\url{http://www.latex-project.org/}}}
