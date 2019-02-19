@@ -1,0 +1,8 @@
+\documentclass[a4paper,12pt]{article}
+\author{Manolito Perez xd :v}
+\title{Haciendo una portada simple}
+\date{aqui va la fecha pero puedo poner lo que sea xd}
+\begin{document}
+\maketitle
+Hola UNI, este es mi primer texto en \LaTeX.
+\end{document}
