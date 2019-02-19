@@ -1,4 +1,0 @@
-\babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Clases de documentos}{2}{0}{1}
-\beamer@sectionintoc {2}{Fuentes, tama\IeC {\~n}os y colores}{6}{0}{2}
-\beamer@sectionintoc {3}{Portada simple}{9}{0}{3}
