@@ -1,0 +1,225 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{verbatim}
+\usepackage{verbments}
+\usepackage{marvosym}
+\usepackage[marvosym]{tikzsymbols}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1, key2, key3}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+\usepackage[lmargin=2cm, rmargin=1cm, tmargin=2cm, bmargin=2cm]{geometry}
+\definecolor{fondo1}{rgb}{0.96, 0.96, 0.96}
+\definecolor{fondo2}{rgb}{0.3, 0.6, 0.5}
+\definecolor{links}{rgb}{0.2, 0.2, 1.0}
+\title{Adiciones a la Clase 01}
+\author{HeNeos}
+\begin{document}
+\fvset{frame=bottomline, framerule=0.02cm}
+\plset{language=latex,texcl=true, listingnamefont=\sffamily\bfseries\color{white},captionbgcolor=fondo2, bgcolor=fondo1,listingname=\textbf{Iniciando}, captionfont=\sffamily\color{white}}
+	\maketitle
+En la clase anterior vimos como es posible manejar colores, imágenes, tamaño y fuentes en \LaTeX, pero aún no hemos visto como podemos hacer modificaciones al texto $\ldots$ específicamente nos referimos a algunas instrucciones en \LaTeX\, que nos permiten modificar la estructura que vamos redactando sin necesidad de implicar un cambio global en el documento.
+\section{Configuración de márgenes, interlineado e indentación}
+En el preámbulo del documento agregamos lo siguiente:
+\begin{pyglist}[language=latex,caption={Márgenes del documento},style=pastie]
+%--------Preambulo--------------------------------------------------------------------
+\documentclass[a4paper, 10pt]{article}
+%
+%
+%-------------Configuracion de margen-------------
+\usepackage[lmargin=3cm, rmargin=2.5cm, tmargin=3cm, bmargin=2.5cm]{geometry}
+%lmargin = margen izquierdo
+%rmargin = margen derecho
+%tmargin = margen superior
+%bmargin = margen inferior
+%-------------------------------------------------
+%
+%
+%-------------Configuracion del interlineado------
+\linespread{n}
+%Donde $n$ es un numero adimensional indicando el espacio interlineal
+%-------------------------------------------------
+%
+%
+%-------------Indentacion-------------------------
+%Al usar la sentencia noindent al inicio de un parrafo se elimina su indentacion por defecto
+\noindent
+%-------------------------------------------------
+%
+%
+\author{HeNeos}
+%--------Fin del preambulo------------------------------------------------------------
+\begin{document}
+...
+...
+...
+\end{document}
+\end{pyglist}
+\section{Control de texto}
+\subsection{hspace y vspace}
+Dos de los comandos más útiles a la hora de editar texto son \texttt{$\backslash$hspace\{$n$\}} y \texttt{$\backslash$vspace\{$n$\}}, el primero nos inserta un espacio horizontal de tamaño $n$, mientras que el segundo un tamaño vertical de tamaño $n$. Note que, $n$ representa una longitud, por lo que debe ser un número con su respectiva medida; es decir, \texttt{$\backslash$hspace\{5\}} es incorrecto, mientras que \texttt{$\backslash$vspace\{5pt\}} es correcto porque indicamos que la longitud es de tamaño 5pt. No hemos hablado demasiado de la unidad ``pt'', en \LaTeX\, es una unidad que equivale a $\frac{1}{72.27}\,$inch; como es una unidad de medida podemos reemplazarla también por cm, m, ft, etc. Adicionalmente, se puede usar una versión \textit{forzada} de los mismos añadiendo un asterisco. \href{https://tex.stackexchange.com/questions/89082/hspace-vs-hspace}{\textcolor{links}{\underline{\textbf{Revisar este link.}}}}
+\subsection{hfill y vfill}
+Similares a \texttt{hpsace} y \texttt{vspace}; con la diferencia que estos rellenan un espacio hasta el margen:\\
+Escribiendo una línea con \hfill \texttt{hfill}.\\
+Escribiendo una línea con \vfill \texttt{vfill}.
+\newpage
+\section{Alinear texto}
+Para alinear un texto tenemos tres opciones: por la izquierda, centrado y por la derecha.
+\begin{pyglist}[language=latex,caption={Justificacion del texto},style=pastie]
+%--------Preambulo--------------------------------------------------------------------
+\documentclass[a4paper, 10pt]{article}
+%-------------Justificacion de texto-------------
+\begin{flushleft}
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+
+
+Este parrafo esta justificado por la izquierda
+
+Este parrafo esta justificado por la izquierda
+\end{flushleft}
+\begin{center}
+Este parrafo esta centrado
+Este parrafo esta centrado
+Este parrafo esta centrado
+
+Este parrafo esta centrado
+
+Este parrafo esta centrado
+\end{center}
+\begin{flushright}
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+
+Este parrafo esta justificado por la derecha
+
+Este parrafo esta justificado por la derecha
+\end{flushright}
+%--------Fin del preambulo------------------------------------------------------------
+\begin{document}
+...
+...
+...
+\end{document}
+\end{pyglist}
+El código anterior nos da como resultado:
+\begin{flushleft}
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+Este parrafo esta justificado por la izquierda
+
+
+Este parrafo esta justificado por la izquierda
+
+Este parrafo esta justificado por la izquierda
+\end{flushleft}
+\begin{center}
+Este parrafo esta centrado
+Este parrafo esta centrado
+Este parrafo esta centrado
+
+Este parrafo esta centrado
+
+Este parrafo esta centrado
+\end{center}
+\begin{flushright}
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+Este parrafo esta justificado por la derecha
+
+Este parrafo esta justificado por la derecha
+
+Este parrafo esta justificado por la derecha
+\end{flushright}
+\section{Listas y enumeraciones}
+Muchas veces, queremos enumerar algo o simplemente listarlo. Para ello tenemos disponible dos opciones:
+\begin{pyglist}[language=latex,caption={Márgenes del documento},style=pastie]
+%--------Preambulo--------------------------------------------------------------------
+\documentclass[a4paper, 10pt]{article}
+%-------------Listar elementos-------------
+\begin{itemize}
+\item Esto
+\item es
+\item una
+\item lista sin enumerar
+\end{itemize}
+
+\begin{enumerate}
+\item Esto
+\item es
+\item una
+\item lista
+\item enumerada
+\begin{itemize}
+\item una lista
+\item no enumerada
+\item dentro de una enumerada
+\begin{enumerate}
+\item y ahora vuelta a enumerar
+\end{enumerate}
+\item sin enumerar
+\end{itemize}
+\item vuelto a enumerar
+\end{enumerate}
+%------------------------------------------
+\end{pyglist}
+Lo que da como resultado:
+\begin{itemize}
+\item Esto
+\item es
+\item una
+\item lista sin enumerar
+\end{itemize}
+
+\begin{enumerate}
+\item Esto
+\item es
+\item una
+\item lista
+\item enumerada
+\begin{itemize}
+\item una lista
+\item no enumerada
+\item dentro de una enumerada
+\begin{enumerate}
+\item y ahora vuelta a enumerar
+\end{enumerate}
+\item sin enumerar
+\end{itemize}
+\item vuelto a enumerar
+\end{enumerate}
+\section{Complementos random}
+\subsection{Agregar un índice}
+En la sesión anterior vimos como es posible crear una portada simple de forma rápida; ahora veremos como es posible crear una tabla de contenidos o índice. Para ello usaremos el comando \texttt{$\backslash$tableofcontents} dentro del cuerpo del documento, este puede estar en cualquier ubicación, aunque lo normal es situarlo justo después de la carátula, por lo que iría después de nuestro \texttt{$\backslash$maketitle}.
+\subsection{Página nueva}
+Para iniciar una página nueva en nuestro documento podemos usar las instrucciones \texttt{$\backslash$newpage} y \texttt{$\backslash$clearpage}.
+\subsection{Alargar página}
+Podemos ``alargar'' un tamaño pequeño nuestra página con la instrucción \texttt{$\backslash$enlargethispage*\{n\}}, aquí $n$ representa una longitud pequeña, por lo que debería estar en mm o pt.
+\end{document}
