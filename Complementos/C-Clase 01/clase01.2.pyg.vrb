@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PY{c}{\PYZpc{}--------Preambulo--------------------------------------------------------------------}
+\PY{k}{\PYZbs{}documentclass}\PY{n+na}{[a4paper, 10pt]}\PY{n+nb}{\PYZob{}}article\PY{n+nb}{\PYZcb{}}
+\PY{c}{\PYZpc{}-------------Listar elementos-------------}
+\PY{k}{\PYZbs{}begin}\PY{n+nb}{\PYZob{}}itemize\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} Esto
+\PY{k}{\PYZbs{}item} es
+\PY{k}{\PYZbs{}item} una
+\PY{k}{\PYZbs{}item} lista sin enumerar
+\PY{k}{\PYZbs{}end}\PY{n+nb}{\PYZob{}}itemize\PY{n+nb}{\PYZcb{}}
+
+\PY{k}{\PYZbs{}begin}\PY{n+nb}{\PYZob{}}enumerate\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} Esto
+\PY{k}{\PYZbs{}item} es
+\PY{k}{\PYZbs{}item} una
+\PY{k}{\PYZbs{}item} lista
+\PY{k}{\PYZbs{}item} enumerada
+\PY{k}{\PYZbs{}begin}\PY{n+nb}{\PYZob{}}itemize\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} una lista
+\PY{k}{\PYZbs{}item} no enumerada
+\PY{k}{\PYZbs{}item} dentro de una enumerada
+\PY{k}{\PYZbs{}begin}\PY{n+nb}{\PYZob{}}enumerate\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} y ahora vuelta a enumerar
+\PY{k}{\PYZbs{}end}\PY{n+nb}{\PYZob{}}enumerate\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} sin enumerar
+\PY{k}{\PYZbs{}end}\PY{n+nb}{\PYZob{}}itemize\PY{n+nb}{\PYZcb{}}
+\PY{k}{\PYZbs{}item} vuelto a enumerar
+\PY{k}{\PYZbs{}end}\PY{n+nb}{\PYZob{}}enumerate\PY{n+nb}{\PYZcb{}}
+\PY{c}{\PYZpc{}------------------------------------------}
+\end{Verbatim}

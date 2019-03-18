@@ -1,0 +1,28 @@
+%--------Preambulo--------------------------------------------------------------------
+\documentclass[a4paper, 10pt]{article}
+%-------------Listar elementos-------------
+\begin{itemize}
+\item Esto
+\item es
+\item una
+\item lista sin enumerar
+\end{itemize}
+
+\begin{enumerate}
+\item Esto
+\item es
+\item una
+\item lista
+\item enumerada
+\begin{itemize}
+\item una lista
+\item no enumerada
+\item dentro de una enumerada
+\begin{enumerate}
+\item y ahora vuelta a enumerar
+\end{enumerate}
+\item sin enumerar
+\end{itemize}
+\item vuelto a enumerar
+\end{enumerate}
+%------------------------------------------
