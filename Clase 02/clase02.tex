@@ -1,0 +1,79 @@
+\documentclass{beamer}
+\usepackage{amsmath,amssymb,amsfonts,latexsym,stmaryrd}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[ruled,vlined,lined,linesnumbered,algosection,spanish]{algorithm2e}
+\usepackage[T1]{fontenc}
+%\usepackage{epstopdf}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usepackage{beamerthemesplit}
+\usetheme{progressbar}
+\usecolortheme{progressbar}
+\institute{\vskip1ex Facultad de Ingeniería Mecánica\\ \vskip-1ex Universidad Nacional de Ingeniería}
+%\subtitle{subtitle}
+\definecolor{tableShade}{HTML}{787878}
+\definecolor{tableShade2}{HTML}{606060}
+\setbeamersize{text margin left=.5cm,text margin right=.5cm}
+%\progressbaroptions{headline=none, frametitle=ckcompliant}
+\progressbaroptions{frametitle=picture-subsection}
+%\setbeamercovered{transparent} % Velos
+%\setbeamertemplate{footline}{}
+%\titlegraphic{jaden2.jpeg}
+%\titlegraphicbackground{usydred}
+\title{\huge Texto matemático}
+\author[HeNeos]{\large Josué Huaroto Villavicencio}
+\date{\tiny 18 de marzo del 2019}
+\begin{document}
+\begin{frame}
+\maketitle
+\end{frame}
+\section{Introducción}
+\begin{frame}{Introducción}
+Una de las mayores ventajas que ofrece \LaTeX\, es su fácil y completo manejo a la hora de escribir ecuaciones matemáticas. Por ello, es necesario que esta sección sea bien aprendida. Empezaremos dando unas claras diferencias sobre lo que significa estar en \textit{entorno matemático} y el \textit{entorno texto} o entorno común que es en el que hasta el momento hemos estado escribiendo. El entorno matemático no es más que una parte del código que \LaTeX\, identifica que llevará ciertos comandos especiales que no pueden usarse en el entorno común; por ejemplo, si quisierámos usar la instrucción \texttt{$\backslash$beta} nos daría un error; en cambio \texttt{\$$\backslash$beta\$} nos genera el símbolo $\beta$.\\
+El error es debido a los símbolos \$ \$ entre los que se encuentra nuestro comando; los símbolos de dólar son usados para indicar a \LaTeX\, que lo que esté dentro de esos símbolos estará en entorno matemático; y por tanto, puede usar algunos comandos especiales.
+\end{frame}
+\begin{frame}{2 entornos matemáticos ????}
+En la introducción se explica que los símbolos \$ \$ denotan para \LaTeX\, un entorno matemático, pero también puede usarse \$\$ \$\$. La diferencia entre ambos es que el primero es conocido como el modo \texttt{in-line}, mientras que el segundo genera nuestro texto matemático en una nueva línea:\\[20pt]
+Esto es una ecuación en modo \texttt{in-line} $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} \;\;\; \forall \alpha \in \mathbb{R} $\\[20pt]
+Esto es una ecuación en modo \texttt{equation}
+$$
+\tan \alpha = \frac{\sin \alpha}{\cos \alpha} \;\;\; \forall \alpha \in \mathbb{R}
+$$
+\end{frame}
+\section{Expresiones más usadas}
+\begin{frame}{Símbolos}
+\begin{minipage}[t][0.8\textheight][t]{\dimexpr0.5\textwidth-5pt\relax}
+\begin{itemize}
+\item \$$\backslash$alpha\$ \\
+\item \$$\backslash$beta\$ \\
+\item \$$\backslash$gamma\$ \\
+\item \$$\backslash$theta\$ \\
+\item \$$\backslash$omega\$ \\
+\item \$$\backslash$lambda\$ \\
+\item \$$\backslash$mu\$ \\
+\item \$$\backslash$pi\$ \\
+\item \$$\backslash$rho\$ \\ 
+\item \$$\backslash$sigma\$ \\
+\item \$$\backslash$tau\$
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t][0.8\textheight][t]{\dimexpr0.5\textwidth-5pt\relax}
+\begin{itemize}
+\item $\alpha$
+\item $\beta$
+\item $\gamma$
+\item $\theta$
+\item $\omega$
+\item $\lambda$
+\item $\mu$
+\item $\pi$
+\item $\rho$
+\item $\sigma$
+\item $\tau$
+\end{itemize}
+\end{minipage}
+\end{frame}
+
+\end{document}
